@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity() {
         adapter = MainAdapter()
         adapter.notifyDataSetChanged()
 
-        rv_main.layoutManager = StaggeredGridLayoutManager(3, 1)
+        rv_main.layoutManager = StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL)
         rv_main.adapter = adapter
 
         adapter.setOnItemClickCallback(object : MainAdapter.OnItemClickCallback {

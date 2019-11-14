@@ -1,6 +1,5 @@
 package id.co.dot.entity
 
-
 import android.os.Parcelable
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
@@ -12,7 +11,6 @@ data class GalleryBatu(
     @SerializedName("caption")
     @Expose
     val caption: String,
-
 
     @SerializedName("thumbnail")
     @Expose
