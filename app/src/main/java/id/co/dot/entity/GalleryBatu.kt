@@ -1,5 +1,6 @@
 package id.co.dot.entity
 
+
 import android.os.Parcelable
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
@@ -8,15 +9,18 @@ import kotlinx.android.parcel.Parcelize
 @Parcelize
 data class GalleryBatu(
 
-    @SerializedName("image")
+    @SerializedName("caption")
     @Expose
-    val image: String? = null,
+    val caption: String,
+
 
     @SerializedName("thumbnail")
     @Expose
-    val thumbnail: String? = null,
+    val thumbnail: String,
 
-    @SerializedName("caption")
+    @SerializedName("image")
     @Expose
-    val caption: String? = null
+    val image: String
+
 ) : Parcelable
+

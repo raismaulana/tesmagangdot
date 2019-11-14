@@ -40,7 +40,7 @@ class MainAdapter : RecyclerView.Adapter<MainAdapter.ViewHolder>() {
         fun bind(galleryBatu: GalleryBatu) {
             with(itemView) {
                 Glide.with(itemView.context)
-                    .load(galleryBatu.thumbnail)
+                    .load(galleryBatu.image)
                     .placeholder(R.drawable.ic_broken_image_black_100dp)
                     .into(img_thumbnail)
 

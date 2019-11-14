@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
         viewModel.getGalleryBatu().observe(this, Observer { listData ->
             if (listData != null) {
                 showLoading(false)
-                Log.d("VIEWMODEL", listData.toString())
+                Log.d("response body", listData.toString())
                 adapter.setData(listData)
             }
         })
@@ -48,7 +48,7 @@ class MainActivity : AppCompatActivity() {
 
         adapter.setOnItemClickCallback(object : MainAdapter.OnItemClickCallback {
             override fun onItemClicked(data: GalleryBatu) {
-                val parcel = GalleryBatu(data.image, data.thumbnail, data.caption)
+                val parcel = GalleryBatu(data.caption, data.thumbnail, data.image)
                 val mIntent = Intent(this@MainActivity, DetailActivity::class.java)
                 mIntent.putExtra(CONSTANT.EXTRA_DETAIL, parcel)
                 startActivity(mIntent)

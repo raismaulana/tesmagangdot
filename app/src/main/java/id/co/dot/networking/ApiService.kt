@@ -26,5 +26,4 @@ class ApiService : Application() {
 
     val services: GalleryBatuApi = retrofit.create(GalleryBatuApi::class.java)
 
-
 }

@@ -24,7 +24,6 @@ class MainViewModel : ViewModel() {
                     call: Call<ArrayList<GalleryBatu>>,
                     response: Response<ArrayList<GalleryBatu>>
                 ) {
-                    Log.d("response body ", response.body().toString())
                     listGalleryBatu.postValue(response.body())
                 }
             })
